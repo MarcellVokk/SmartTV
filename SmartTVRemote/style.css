@@ -1,0 +1,60 @@
+.box{
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 20px auto;
+    position: relative;
+}
+
+.buttonUp,.buttonDown,.buttonLeft,.buttonRight,.buttonEnter,.buttonBack{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 50px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: teal;
+    border-radius: 10px;
+}
+
+.buttonUp{
+    background-color: red;
+    position: relative;
+    top: 0px;
+    left: 200px;
+}
+
+.buttonDown{
+    background-color: red;
+    position: relative;
+    top: 400px;
+    left: -4px;
+}
+
+.buttonLeft{
+    background-color: red;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.buttonRight{
+    background-color: red;
+    position: relative;
+    top: 0px;
+    left: 196px;
+}
+
+.buttonEnter{
+    background-color: red;
+    position: relative;
+    top: -200px;
+    left: 200px;
+}
+
+.buttonBack{
+    background-color: red;
+    position: relative;
+    top: 0px;
+    left: 196px;
+}

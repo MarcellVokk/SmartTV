@@ -1,0 +1,87 @@
+<html>
+
+    <head>
+        <title>Remote</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+
+    <script>
+    var firebaseConfig = {
+    apiKey: "AIzaSyCO8Wu3Fuc4azdDUgDMizVtWu0jCs5WYCs",
+    authDomain: "smarttv-2967e.firebaseapp.com",
+    projectId: "smarttv-2967e",
+    storageBucket: "smarttv-2967e.appspot.com",
+    messagingSenderId: "922429717222",
+    appId: "1:922429717222:web:e22929b5b861c4d70c5927",
+    measurementId: "G-ZTJ4HFFFGP"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    function writeDataUp() {
+        var date = new Date();
+
+        firebase.database().ref("Actions").set({
+            action: "up" + date.getTime()
+        })
+    }
+
+    function writeDataLeft() {
+        var date = new Date();
+
+        firebase.database().ref("Actions").set({
+            action: "left" + date.getTime()
+        })
+    }
+
+    function writeDataRight() {
+        var date = new Date();
+
+        firebase.database().ref("Actions").set({
+            action: "right" + date.getTime()
+        })
+    }
+
+    function writeDataDown() {
+        var date = new Date();
+
+        firebase.database().ref("Actions").set({
+            action: "down" + date.getTime()
+        })
+    }
+        
+    function writeDataEnter() {
+        var date = new Date();
+
+        firebase.database().ref("Actions").set({
+            action: "enter" + date.getTime()
+        })
+    }
+
+    function writeDataBack() {
+        var date = new Date();
+
+        firebase.database().ref("Actions").set({
+            action: "back" + date.getTime()
+        })
+    }
+
+    </script>
+
+    </body>
+
+    <div class = "box">
+        <button class="buttonUp" onclick = "writeDataUp()">▲</button>
+        <button class="buttonDown" onclick = "writeDataDown()">▼</button>
+        <button class="buttonLeft" onclick = "writeDataLeft()">◄</button>
+        <button class="buttonRight" onclick = "writeDataRight()">►</button>
+        <button class="buttonEnter" onclick = "writeDataEnter()">○</button>
+        <button class="buttonBack" onclick = "writeDataBack()">↩️</button>
+    </div>
+</html>
